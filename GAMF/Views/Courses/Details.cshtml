@@ -1,0 +1,30 @@
+﻿@model GAMF.Models.Course
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2 class="set-top-margin">Tantárgy részletei</h2>
+
+<div>
+    <h4>Tantárgy</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Credits)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Credits)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CourseId">Tantárgy szerkesztése</a> |
+    <a asp-action="Index">Vissza a tantárgyak listájához</a>
+</div>

@@ -1,0 +1,39 @@
+﻿@model GAMF.Models.Student
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2 class="set-top-margin">Jelentkezés törlése</h2>
+
+<h3>Biztos, hogy törölni szeretné a hallgató jelentkezését?</h3>
+<div>
+    <h4>Hallgató</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstMidName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstMidName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EnrollmentDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EnrollmentDate)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Törlés" class="btn btn-default" /> |
+        <a asp-action="Index">Vissza a Hallgatók listájához</a>
+    </form>
+</div>
